@@ -13,7 +13,17 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 
 # app/assets
-Rails.application.config.assets.precompile += %w( admins_backoffice.js admins_backoffice.css )
+Rails.application.config.assets.precompile += %w( admins_backoffice.js admins_backoffice.css 
+                                                  users_backoffice.js users_backoffice.css
+                                                  site.js site.css )
 
-# lib/assets
-Rails.application.config.assets.precompile += %w( custom.js custom.css )
+# lib/assets dos admins
+Rails.application.config.assets.precompile += %w( custom-admin.js custom-admin.css )
+
+# lib/assets dos users
+Rails.application.config.assets.precompile += %w( bootstrap.css fontawesome.css
+                                                  app-style-switcher.js style-user.css
+                                                  custom-user.js sidebarmenu.js waves.js )       
+                                                  
+# lib/assets do site
+Rails.application.config.assets.precompile += %w( script.js style-site.css logo.png)
